@@ -175,4 +175,10 @@ class ShardingPlugin implements IShardingPlugin {
 
   @override
   void onBotStop(INyxx nyxx, Logger logger) {}
+
+  @override
+  FutureOr<void> onConnectionClose(INyxx nyxx, Logger logger, int closeCode, String? closeReason) {}
+
+  @override
+  FutureOr<void> onConnectionError(INyxx nyxx, Logger logger, String errorMessage) {}
 }
